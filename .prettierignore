@@ -10,3 +10,6 @@ composer.lock
 
 # License texts ship verbatim.
 **/LICENSE*
+
+# Private maintainer files.
+internal/**
