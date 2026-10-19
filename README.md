@@ -1,99 +1,94 @@
-# Yii agent skills
+<!-- markdownlint-disable MD041 -->
+<p align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
+        <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg" alt="Yii Framework" width="80%">
+    </picture>
+    <h1 align="center">Skills</h1>
+    <br>
+</p>
+<!-- markdownlint-enable MD041 -->
 
-Portable Yii 22 application, subsystem and Yii 2.0-to-22 migration skills.
-This bundle is separate from `yiisoft/yii2` and has no runtime dependencies.
+<p align="center">
+    <a href="https://github.com/yii2-extensions/skill/actions/workflows/quality.yml" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/skill/quality.yml?style=for-the-badge&label=Quality&logo=github" alt="Quality">
+    </a>
+</p>
 
-## Install in an application
+<p align="center">
+    <strong>Agent skills for Yii 22 applications</strong><br>
+    <em>Application workflows, framework subsystems, and Yii 2.0 upgrades</em>
+</p>
 
-Bootstrap `llm/skills` once in the application, with explicit project trust.
-Create `skills.json` before installing the plugin:
+Portable instructions and referenced resources for coding agents working with Yii applications.
+The package provides twenty focused workflows independently of the framework runtime.
 
-```json
-{
-  "target": ".agents/skills",
-  "aliases": [".claude/skills"],
-  "auto-sync": true,
-  "vendor-sources": false,
-  "dependencies": {
-    "composer": {
-      "trusted-replace": true,
-      "trusted": ["yii2-extensions/skill"]
-    }
-  }
-}
-```
+## Features
 
-Until this package is registered on Packagist, declare its VCS repository:
+<picture>
+    <source media="(min-width: 768px)" srcset="./docs/svgs/features.svg">
+    <img src="./docs/svgs/features-mobile.svg" alt="Feature Overview" style="width: 100%;">
+</picture>
+
+## Quick start
+
+### Installation
+
+Create the application's `skills.json` using the [installation guide](docs/installation.md), then install the bundle:
 
 ```bash
 composer config repositories.yii2-skill vcs https://github.com/yii2-extensions/skill
 composer config allow-plugins.llm/skills true
 composer require --dev llm/skills:1.15.0 yii2-extensions/skill:dev-main
+```
+
+The Composer installer requires PHP 8.2+ and explicit trust for this package.
+Later dependency installs and updates synchronize its skills automatically.
+
+### Basic usage
+
+List the installed workflows and choose the one matching the task:
+
+```bash
 composer skills:show
 ```
 
-Subsequent `composer install` and `composer update` synchronize the trusted
-bundle automatically. Codex and OpenCode read `.agents/skills`; Claude Code
-uses its alias. No Node.js installation is required. Metadata alone does not
-install or enable the plugin. Add extension package names to the explicit trust
-list when their skills are also wanted.
+For example, request `$yii2-forms-validation` in Codex for an ActiveForm task, or use `yii2-upgrade-22` to assess
+an existing Yii 2.0 application's migration. See the [skill catalog](skills/README.md) and
+[client examples](docs/examples.md).
 
-Sync overwrites donor-owned files and retains retired files until deliberate
-cleanup. Its automatic hook reports synchronization failures without failing
-Composer; inspect `composer skills:show` and use an explicit
-`composer skills:update` when a failing exit code is required. Set `auto-sync`
-to `false` to opt out; `--no-scripts` is not a verified opt-out with Composer 2.10.3.
+## Documentation
 
-### Optional npx installation
+- 📚 [Installation Guide](docs/installation.md): one-time Composer setup and optional installers.
+- ⚙️ [Configuration Guide](docs/configuration.md): trust, synchronization, aliases, and cleanup.
+- 💡 [Usage Examples](docs/examples.md): select and invoke the appropriate workflow.
+- 🤖 [Skill Catalog](skills/README.md): all twenty framework skill bundles.
 
-```bash
-npx skills@1.7.2 add yii2-extensions/skill --list
-npx skills@1.7.2 add yii2-extensions/skill --skill yii2-framework --agent codex
-```
+## AI assistance
 
-## Available skills
+Read the chosen skill's complete `SKILL.md` and its referenced resources. Match the installed framework revision
+before applying Yii 22 guidance; each bundle includes its scope, relevant documentation, and observable checks.
 
-`composer skills:show` lists discovered donor skills and synchronization status.
-That is distinct from a coding agent's native discovery and activation.
+For matching hosted documentation, use <https://yii2-framework.github.io/docs/llms.txt> to select focused pages.
+When hosted material does not match the installed code, use the available source and PHPDoc.
 
-| Skill                                                                | Workflow                                                                                                                                                                                                                                                          |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [yii2-autoload-di](skills/yii2-autoload-di/SKILL.md)                 | Configure Yii 22.0 Composer autoloading, dependency injection, application components, and bootstrap wiring. Use for class resolution or object lifetime changes; not general project scaffolding.                                                                |
-| [yii2-caching](skills/yii2-caching/SKILL.md)                         | Configure or repair Yii 22.0 data, query, fragment, page, and HTTP caching with correct keys and invalidation. Use for cache behavior or backend upgrades; not general performance tuning or lock coordination.                                                   |
-| [yii2-console-commands](skills/yii2-console-commands/SKILL.md)       | Implement Yii 22.0 console controllers, argument binding, options, command output, and exit behavior. Use for CLI commands and automation; not web actions or automatically executing maintenance commands.                                                       |
-| [yii2-data-widgets](skills/yii2-data-widgets/SKILL.md)               | Implement Yii 22.0 data providers, pagination, sorting, GridView, ListView, and DetailView. Use for data listing and display contracts; not replacing the application UI framework.                                                                               |
-| [yii2-database-migrations](skills/yii2-database-migrations/SKILL.md) | Implement Yii 22.0 queries, ActiveRecord persistence, database compatibility, and migrations. Use for SQL/schema or record lifecycle changes; not form UI or database server administration.                                                                      |
-| [yii2-events-behaviors](skills/yii2-events-behaviors/SKILL.md)       | Implement Yii 22.0 component events and reusable behaviors, including record lifecycle behaviors. Use for attachment, handler ordering, and lifecycle effects; not general dependency injection or background jobs.                                               |
-| [yii2-files-uploads](skills/yii2-files-uploads/SKILL.md)             | Implement Yii 22.0 uploaded-file validation, storage, and download responses. Use for file lifecycle and path handling; not general asset bundle publication or server administration.                                                                            |
-| [yii2-forms-validation](skills/yii2-forms-validation/SKILL.md)       | Implement Yii 22.0 model input loading, scenarios, validation, ActiveForm, and client validation strategies. Use for form correctness and mass assignment; not general ActiveRecord query design.                                                                 |
-| [yii2-framework](skills/yii2-framework/SKILL.md)                     | Use when creating or changing a Yii 22.0 app, including setup, controllers, ActiveRecord, forms, tests.                                                                                                                                                           |
-| [yii2-i18n-formatting](skills/yii2-i18n-formatting/SKILL.md)         | Change Yii 22.0 translations, message sources, locale formatting, and timezone handling. Use for localized content and values; not language-prefixed routing owned by a separate extension.                                                                       |
-| [yii2-logging-errors](skills/yii2-logging-errors/SKILL.md)           | Configure Yii 22.0 logging, profiling, PSR-3 adapters, and exception rendering. Use for diagnostic delivery and error contracts; not an unsolicited monitoring stack replacement.                                                                                 |
-| [yii2-mail](skills/yii2-mail/SKILL.md)                               | Implement Yii 22.0 message composition, mail views, transport integration, and delivery-result handling. Use for application email code; not sending real messages without task authorization.                                                                    |
-| [yii2-mutex](skills/yii2-mutex/SKILL.md)                             | Implement Yii 22.0 mutex-based coordination with correct lock scope, acquisition failure, and release. Use for critical sections or concurrent workers; not ordinary caching or database transactions.                                                            |
-| [yii2-rest-apis](skills/yii2-rest-apis/SKILL.md)                     | Implement Yii 22.0 REST resource actions, authentication, serialization, filtering, and HTTP contracts. Use for APIs built on yii rest; not ordinary HTML controller routing.                                                                                     |
-| [yii2-security-access](skills/yii2-security-access/SKILL.md)         | Implement Yii 22.0 identity authentication, access filters, RBAC, and cryptographic API usage. Use for login or permission behavior; not an unsolicited full security audit.                                                                                      |
-| [yii2-sessions-cookies](skills/yii2-sessions-cookies/SKILL.md)       | Configure or repair Yii 22.0 sessions, cookies, CSRF state, and session storage. Use for browser state lifecycle and session backend upgrades; not general login or RBAC implementation.                                                                          |
-| [yii2-testing-fixtures](skills/yii2-testing-fixtures/SKILL.md)       | Create or repair Yii 22.0 application tests and database fixtures using the existing test runner. Use for fixture lifecycle and test isolation; not automatically installing a template test stack.                                                               |
-| [yii2-upgrade-22](skills/yii2-upgrade-22/SKILL.md)                   | Assess or carry out an existing application's upgrade from Yii 2.0.x to Yii 22.0, including dependency blockers, applicable breaking changes, and staged verification. Use for the cross-version transition, not a new app or an isolated change already on 22.0. |
-| [yii2-views-assets](skills/yii2-views-assets/SKILL.md)               | Change Yii 22.0 views, layouts, asset bundles, JavaScript registration, and frontend integration. Use for rendering and asset delivery; not model validation or choosing a new UI framework.                                                                      |
-| [yii2-web-routing-actions](skills/yii2-web-routing-actions/SKILL.md) | Implement or repair Yii 22.0 web routes, controller actions, standalone actions, and action filters. Use for dispatch and request binding; not REST resource design or console commands.                                                                          |
+## Package information
 
-## Maintain the bundle
+[![Yii 22.0.x](https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white)](https://github.com/yiisoft/yii2/tree/22.0)
 
-Edit each complete `skills/<name>/` directory here. Keep referenced resources
-portable and preserve the skill names and public documentation URLs. Run:
+The workflows target Yii 22. The bundle contains instructions and resources and has no runtime dependencies.
 
-```bash
-php tools/check.php
-composer validate --strict
-composer archive --format=zip --dir=artifacts
-```
+## Project status
 
-The documentation site imports this repository at a recorded revision.
-It publishes copied bundles unchanged and renders human-readable skill pages.
-Reading a SKILL.md or installing a bundle does not prove native agent activation.
+[![Quality](https://img.shields.io/github/actions/workflow/status/yii2-extensions/skill/quality.yml?style=for-the-badge&label=Quality&logo=github)](https://github.com/yii2-extensions/skill/actions/workflows/quality.yml)
+
+## Our social networks
+
+[![Follow on X](https://img.shields.io/badge/-Follow%20on%20X-1DA1F2.svg?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/Terabytesoftw)
 
 ## License
 
-[BSD-3-Clause](LICENSE). See [NOTICE.md](NOTICE.md) for source attribution.
+[![License](https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=555555)](LICENSE)
+
+See [source attribution](NOTICE.md) for the imported framework workflows.

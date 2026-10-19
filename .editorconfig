@@ -26,7 +26,7 @@ indent_size = 2
 indent_size = 2
 
 [*.md]
-indent_size = unset
+indent_size = 2
 trim_trailing_whitespace = false
 
 [*.php]
@@ -44,4 +44,8 @@ indent_size = 2
 
 [LICENSE*]
 indent_style = unset
+indent_size = unset
+
+# Preserve CommonMark numbering in the portable framework workflow.
+[skills/yii2-framework/SKILL.md]
 indent_size = unset

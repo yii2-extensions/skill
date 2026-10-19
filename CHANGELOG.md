@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+The format is based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## 0.1.0 Under development
 
-- feat: distribute the twenty Yii 22 application, subsystem and upgrade skills as a separate Composer bundle.
+- feat: initial development release.
