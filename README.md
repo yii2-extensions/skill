@@ -5,7 +5,7 @@
         <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
         <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg" alt="Yii Framework" width="80%">
     </picture>
-    <h1 align="center">Skills</h1>
+    <h1 align="center">Skill</h1>
     <br>
 </p>
 <!-- markdownlint-enable MD041 -->
