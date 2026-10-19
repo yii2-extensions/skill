@@ -27,12 +27,11 @@ From the application root, create `skills.json` before enabling the plugin:
 }
 ```
 
-Install from the repository:
+Install from Packagist:
 
 ```bash
-composer config repositories.yii2-skill vcs https://github.com/yii2-extensions/skill
 composer config allow-plugins.llm/skills true
-composer require --dev llm/skills:1.15.0 yii2-extensions/skill:dev-main
+composer require --dev llm/skills:1.15.0 'yii2-extensions/skill:^0.1'
 composer skills:show
 ```
 
@@ -59,3 +58,5 @@ This workflow requires Node.js/npm separately. Choose the project's client and v
 Copy a complete `skills/<name>/` directory, including `references/`, into the client's project skill path.
 Keep its `<name>/SKILL.md` structure and one effective copy per client. See [client paths](configuration.md#client-paths)
 and [usage examples](examples.md) for discovery and activation checks.
+
+[Back to documentation](../README.md#documentation)

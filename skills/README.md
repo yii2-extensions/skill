@@ -25,3 +25,5 @@ Use the [installation guide](../docs/installation.md) to make the workflows avai
 | [yii2-upgrade-22](yii2-upgrade-22/SKILL.md)                   | Upgrade an existing application to Yii 22.0 |
 | [yii2-views-assets](yii2-views-assets/SKILL.md)               | Views and assets                            |
 | [yii2-web-routing-actions](yii2-web-routing-actions/SKILL.md) | Web routing and actions                     |
+
+[Back to documentation](../README.md#documentation)

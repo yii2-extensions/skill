@@ -55,3 +55,5 @@ composer skills:update --clean --dry-run
 
 Unscoped cleanup can also remove manually authored skill directories. Review the preview and keep authored
 instructions outside the generated target.
+
+[Back to documentation](../README.md#documentation)
