@@ -31,7 +31,7 @@ Install from Packagist:
 
 ```bash
 composer config allow-plugins.llm/skills true
-composer require --dev llm/skills:1.15.0 'yii2-extensions/skill:^0.1'
+composer require --dev llm/skills:1.15.0 yii2-extensions/skill:^0.1
 composer skills:show
 ```
 
