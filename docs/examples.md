@@ -35,3 +35,5 @@ File installation, client discovery, instruction loading, and a correct task res
 
 For an upgrade, establish installed and locked versions, runtime requirements, and affected application behavior
 before following the migration checkpoints. The skill does not authorize live migrations or deployments.
+
+[Back to documentation](../README.md#documentation)

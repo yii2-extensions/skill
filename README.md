@@ -38,9 +38,8 @@ The package provides twenty focused workflows independently of the framework run
 Create the application's `skills.json` using the [installation guide](docs/installation.md), then install the bundle:
 
 ```bash
-composer config repositories.yii2-skill vcs https://github.com/yii2-extensions/skill
 composer config allow-plugins.llm/skills true
-composer require --dev llm/skills:1.15.0 yii2-extensions/skill:dev-main
+composer require --dev llm/skills:1.15.0 yii2-extensions/skill:^0.1
 ```
 
 The Composer installer requires PHP 8.2+ and explicit trust for this package.
@@ -90,5 +89,3 @@ The workflows target Yii 22. The bundle contains instructions and resources and 
 ## License
 
 [![License](https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=555555)](LICENSE)
-
-See [source attribution](NOTICE.md) for the imported framework workflows.
