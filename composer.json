@@ -1,0 +1,45 @@
+{
+    "name": "yii2-extensions/skill",
+    "type": "library",
+    "description": "Portable Yii 22 application and migration skills for coding agents.",
+    "keywords": [
+        "yii2",
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "opencode"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Wilmer Arambula",
+            "homepage": "https://github.com/terabytesoftw",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "skills": {
+            "source": "skills"
+        },
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "scripts": {
+        "check": "php tools/check.php"
+    },
+    "archive": {
+        "exclude": [
+            "/internal",
+            "/artifacts",
+            "/vendor",
+            "/.git",
+            "/.github",
+            "/.editorconfig",
+            "/.gitattributes",
+            "/.gitignore",
+            "/.prettierignore",
+            "/.prettierrc.json"
+        ]
+    }
+}

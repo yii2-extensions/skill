@@ -1,0 +1,10 @@
+* text=auto eol=lf
+/internal export-ignore
+/vendor export-ignore
+/artifacts export-ignore
+/.github export-ignore
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.prettierignore export-ignore
+/.prettierrc.json export-ignore
