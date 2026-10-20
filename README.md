@@ -11,12 +11,6 @@
 <!-- markdownlint-enable MD041 -->
 
 <p align="center">
-    <a href="https://github.com/yii2-extensions/skill/actions/workflows/quality.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/yii2-extensions/skill/quality.yml?style=for-the-badge&label=Quality&logo=github" alt="Quality">
-    </a>
-</p>
-
-<p align="center">
     <strong>Agent skills for Yii 22 applications</strong><br>
     <em>Application workflows, framework subsystems, and Yii 2.0 upgrades</em>
 </p>
@@ -43,7 +37,8 @@ composer require --dev llm/skills:1.15.0 yii2-extensions/skill:^0.1
 ```
 
 The Composer installer requires PHP 8.2+ and explicit trust for this package.
-Later dependency installs and updates synchronize its skills automatically.
+With `auto-sync` set to `true`, later dependency installs and updates synchronize its skills automatically.
+If it is `false`, run `composer skills:update` after dependency installation or updates.
 
 ### Basic usage
 
@@ -75,6 +70,7 @@ When hosted material does not match the installed code, use the available source
 ## Package information
 
 [![Yii 22.0.x](https://img.shields.io/badge/22.0.x-0073AA.svg?style=for-the-badge&logo=yii&logoColor=white)](https://github.com/yiisoft/yii2/tree/22.0)
+[![Total Downloads](https://img.shields.io/packagist/dt/yii2-extensions/skill.svg?style=for-the-badge&logo=composer&logoColor=white&label=Downloads)](https://packagist.org/packages/yii2-extensions/skill)
 
 The workflows target Yii 22. The bundle contains instructions and resources and has no runtime dependencies.
 
@@ -85,6 +81,9 @@ The workflows target Yii 22. The bundle contains instructions and resources and 
 ## Our social networks
 
 [![Follow on X](https://img.shields.io/badge/-Follow%20on%20X-1DA1F2.svg?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/Terabytesoftw)
+[![Follow on Facebook](https://img.shields.io/badge/-Follow%20on%20Facebook-1877F2.svg?style=for-the-badge&logo=facebook&logoColor=white&labelColor=000000)](https://www.facebook.com/wilmer.arambula.9)
+[![Join our Subreddit](https://img.shields.io/badge/-Join%20our%20Subreddit-FF4500.svg?style=for-the-badge&logo=reddit&logoColor=white&labelColor=000000)](https://www.reddit.com/r/Yii2/)
+[![Join on Telegram](https://img.shields.io/badge/-Join%20on%20Telegram-26A5E4.svg?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000)](https://t.me/yii_framework_in_english)
 
 ## License
 
