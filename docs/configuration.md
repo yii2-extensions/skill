@@ -44,7 +44,8 @@ for example in CI, run:
 composer skills:update
 ```
 
-Set `auto-sync` to `false` to disable the hook. With the evaluated llm/skills 1.15.0 and Composer 2.10.3 combination,
+Set `auto-sync` to `false` to disable the hook, then run `composer skills:update` after dependency installation or
+updates. With the evaluated llm/skills 1.15.0 and Composer 2.10.3 combination,
 `--no-scripts` still synchronized skills; it is not a verified opt-out. `--no-plugins` disables plugin execution.
 
 Preview cleanup before accepting deletion:
