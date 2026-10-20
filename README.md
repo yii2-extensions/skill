@@ -57,6 +57,7 @@ an existing Yii 2.0 application's migration. See the [skill catalog](skills/READ
 - 📚 [Installation Guide](docs/installation.md): one-time Composer setup and optional installers.
 - ⚙️ [Configuration Guide](docs/configuration.md): trust, synchronization, aliases, and cleanup.
 - 💡 [Usage Examples](docs/examples.md): select and invoke the appropriate workflow.
+- 🧪 [Testing Guide](docs/testing.md): repository quality and workflow security checks.
 - 🤖 [Skill Catalog](skills/README.md): all twenty framework skill bundles.
 
 ## AI assistance

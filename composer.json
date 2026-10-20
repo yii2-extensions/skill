@@ -32,13 +32,37 @@
         "sort-packages": true
     },
     "scripts": {
+        "actionlint": "actionlint",
+        "codespell": "codespell --config .github/linters/.codespellrc",
+        "editorconfig-checker": "editorconfig-checker -config .github/linters/.editorconfig-checker.json",
+        "gitleaks": "gitleaks git --config .github/linters/.gitleaks.toml --redact",
+        "markdownlint": "markdownlint-cli2 --config .github/linters/.markdown-lint.yml '**/*.md'",
+        "prettier": "prettier --check --config .prettierrc.json --ignore-path .prettierignore '**/*.md' '**/*.{yml,yaml}'",
         "quality": [
-            "actionlint",
-            "codespell --config .github/linters/.codespellrc --skip=./.git,./vendor/*,./node_modules/*,./internal/*,./.phpunit.cache/*,./code_coverage/*,./runtime/*",
-            "editorconfig-checker -config .github/linters/.editorconfig-checker.json",
-            "markdownlint-cli2 --config .github/linters/.markdown-lint.yml '**/*.md' '#vendor/**' '#node_modules/**' '#internal/**' '#runtime/**'",
-            "prettier --check --config .prettierrc.json --ignore-path .prettierignore '**/*.md' '**/*.{yml,yaml}' '!runtime/**' '!internal/**'",
-            "yamllint -d 'extends: default\nrules:\n  comments:\n    min-spaces-from-content: 1\n  line-length: disable\n  truthy: disable' .github"
-        ]
+            "@actionlint",
+            "@codespell",
+            "@editorconfig-checker",
+            "@markdownlint",
+            "@prettier",
+            "@yamllint"
+        ],
+        "security": [
+            "@zizmor",
+            "@gitleaks"
+        ],
+        "yamllint": "yamllint -c .github/linters/.yamllint.yml .github",
+        "zizmor": "zizmor --persona=pedantic .github"
+    },
+    "scripts-descriptions": {
+        "actionlint": "Lints GitHub Actions workflows with actionlint.",
+        "codespell": "Checks spelling with codespell.",
+        "editorconfig-checker": "Checks files against the EditorConfig rules.",
+        "gitleaks": "Scans Git history for secrets with Gitleaks.",
+        "markdownlint": "Lints Markdown files with markdownlint-cli2.",
+        "prettier": "Checks Markdown and YAML formatting with Prettier.",
+        "quality": "Runs all repository quality checks.",
+        "security": "Runs the workflow security and secret scanning checks.",
+        "yamllint": "Lints YAML files with yamllint.",
+        "zizmor": "Audits GitHub Actions workflows with zizmor."
     }
 }
