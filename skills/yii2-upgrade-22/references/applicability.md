@@ -1,9 +1,8 @@
 # Apply only the upgrade changes the application needs
 
-Use the exact target's `UPGRADE-22.md` for the complete breaking-change list.
-This map identifies application evidence and appropriate checks; it is not a
-replacement API-removal list or a requirement to modernize every subsystem.
-Public Markdown links are lookup routes, subject to the bundled provenance rules.
+Use the exact target's `UPGRADE-22.md` for the complete breaking-change list. This map identifies application evidence
+and appropriate checks; it is not a replacement API-removal list or a requirement to modernize every subsystem. Public
+Markdown links are lookup routes, subject to the bundled provenance rules.
 
 | Application evidence                                                                                                       | Upgrade boundary and observable check                                                                                                                                                                                                                                                      | Focused guides                                                                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,14 +14,12 @@ Public Markdown links are lookup routes, subject to the bundled provenance rules
 | Existing MSSQL DbSession/RBAC tables, custom driver DDL, or a proposed charset/key conversion                              | Discover real schema and existing values, then use target-specific migration instructions and an isolated rehearsal. Distinguish a necessary compatibility change from optional conversion of historical data. Preserve applied migration history and explicit failure/reversal contracts. | [Migrations](https://yii2-framework.github.io/docs/guide/db-migrations/index.md), [Sessions and cookies](https://yii2-framework.github.io/docs/guide/runtime-sessions-cookies/index.md), [Authorization](https://yii2-framework.github.io/docs/guide/security-authorization/index.md) |
 | Logging overrides, removed diagnostic calls, or a proposed PSR adapter                                                     | Fix affected removed APIs and verify diagnostic/error delivery. New adapters are optional; retain a working logger integration and avoid adapter loops if adopting one.                                                                                                                    | [Logging](https://yii2-framework.github.io/docs/guide/runtime-logging/index.md), [Errors](https://yii2-framework.github.io/docs/guide/runtime-handling-errors/index.md)                                                                                                               |
 
-When matching subsystem skills are already available, use them for the affected
-implementation details. They are optional companions: this bundle's scope and
-acceptance contract do not depend on installing all of them. Mail, REST, uploads,
-localization, events, fixtures, console commands, data widgets, and mutexes need
-focused review when the application uses changed contracts or affected extensions;
-their mere presence does not establish a new migration defect.
+When matching subsystem skills are already available, use them for the affected implementation details. They are
+optional companions: this bundle's scope and acceptance contract do not depend on installing all of them. Mail, REST,
+uploads, localization, events, fixtures, console commands, data widgets, and mutexes need focused review when the
+application uses changed contracts or affected extensions; their mere presence does not establish a new migration
+defect.
 
-Existing tests may be incomplete. State which application behaviors remain
-unverified and what fixture/environment would permit the check. Do not retrofit
-a template's entire test stack or claim a fresh install/archive contains its
+Existing tests may be incomplete. State which application behaviors remain unverified and what fixture/environment would
+permit the check. Do not retrofit a template's entire test stack or claim a fresh install/archive contains its
 development suites without inspecting the actual files.

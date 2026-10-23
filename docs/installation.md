@@ -36,11 +36,11 @@ composer skills:show
 ```
 
 This setup installs all twenty workflows, including their referenced resources. Subsequent `composer install` and
-`composer update` operations synchronize the trusted bundle automatically. The selected package revision is recorded
-in `composer.lock`. Package metadata alone does not install or enable the plugin.
+`composer update` operations synchronize the trusted bundle automatically. The selected package revision is recorded in
+`composer.lock`. Package metadata alone does not install or enable the plugin.
 
-Approve additional extension donors by their exact package names in `trusted`. Keep one donor for each skill name.
-See [configuration](configuration.md) before adding external sources or existing client directories.
+Approve additional extension donors by their exact package names in `trusted`. Keep one donor for each skill name. See
+[configuration](configuration.md) before adding external sources or existing client directories.
 
 ## Optional npx installation
 
@@ -55,8 +55,8 @@ This workflow requires Node.js/npm separately. Choose the project's client and v
 
 ## Manual installation
 
-Copy a complete `skills/<name>/` directory, including `references/`, into the client's project skill path.
-Keep its `<name>/SKILL.md` structure and one effective copy per client. See [client paths](configuration.md#client-paths)
-and [usage examples](examples.md) for discovery and activation checks.
+Copy a complete `skills/<name>/` directory, including `references/`, into the client's project skill path. Keep its
+`<name>/SKILL.md` structure and one effective copy per client. See [client paths](configuration.md#client-paths) and
+[usage examples](examples.md) for discovery and activation checks.
 
 [Back to documentation](../README.md#documentation)

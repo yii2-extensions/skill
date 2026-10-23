@@ -2,6 +2,7 @@
     "name": "yii2-extensions/skill",
     "type": "library",
     "description": "Agent skills for Yii 22 applications, framework subsystems, and Yii 2.0 upgrades.",
+    "homepage": "https://yii2-framework.github.io/docs/extensions/skill/",
     "keywords": [
         "agent-skills",
         "claude-code",
@@ -10,6 +11,11 @@
         "yii2"
     ],
     "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yii2-extensions/skill/issues",
+        "source": "https://github.com/yii2-extensions/skill",
+        "docs": "https://yii2-framework.github.io/docs/extensions/skill/"
+    },
     "authors": [
         {
             "name": "Wilmer Arambula",
@@ -18,8 +24,6 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "extra": {
         "branch-alias": {
             "dev-main": "0.2.x-dev"
