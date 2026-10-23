@@ -16,9 +16,8 @@ Tool references:
 
 ## Repository quality checks
 
-Make the CLI tools used by the shared quality workflow available on `PATH`:
-actionlint with its ShellCheck helper, codespell, EditorConfig Checker, markdownlint-cli2, Prettier and
-yamllint. Run all checks:
+Make the CLI tools used by the shared quality workflow available on `PATH`: actionlint with its ShellCheck helper,
+codespell, EditorConfig Checker, markdownlint-cli2, Prettier and yamllint. Run all checks:
 
 ```bash
 composer quality
@@ -40,8 +39,8 @@ The linter configuration lives in `.github/linters`, and the Prettier configurat
 
 ## Workflow security checks
 
-Make zizmor and Gitleaks available on `PATH`. Audit the current workflow files
-with the same pedantic persona used by the shared security workflow:
+Make zizmor and Gitleaks available on `PATH`. Audit the current workflow files with the same pedantic persona used by
+the shared security workflow:
 
 ```bash
 composer zizmor
@@ -53,15 +52,14 @@ Scan Git history for secrets with the repository's Gitleaks configuration:
 composer gitleaks
 ```
 
-Run both checks. Findings make the command fail; inspect them rather than
-disabling the checks.
+Run both checks. Findings make the command fail; inspect them rather than disabling the checks.
 
 ```bash
 composer security
 ```
 
-Zizmor needs GitHub API access for its online audits. If the tool runs offline,
-report that limit separately. To request an offline audit explicitly:
+Zizmor needs GitHub API access for its online audits. If the tool runs offline, report that limit separately. To request
+an offline audit explicitly:
 
 ```bash
 composer zizmor -- --offline

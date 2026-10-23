@@ -15,8 +15,8 @@
     <em>Application workflows, framework subsystems, and Yii 2.0 upgrades</em>
 </p>
 
-Portable instructions and referenced resources for coding agents working with Yii applications.
-The package provides twenty focused workflows independently of the framework runtime.
+Portable instructions and referenced resources for coding agents working with Yii applications. The package provides
+twenty focused workflows independently of the framework runtime.
 
 ## Features
 
@@ -36,9 +36,9 @@ composer config allow-plugins.llm/skills true
 composer require --dev llm/skills:1.15.0 yii2-extensions/skill:^0.1
 ```
 
-The Composer installer requires PHP 8.2+ and explicit trust for this package.
-With `auto-sync` set to `true`, later dependency installs and updates synchronize its skills automatically.
-If it is `false`, run `composer skills:update` after dependency installation or updates.
+The Composer installer requires PHP 8.2+ and explicit trust for this package. With `auto-sync` set to `true`, later
+dependency installs and updates synchronize its skills automatically. If it is `false`, run `composer skills:update`
+after dependency installation or updates.
 
 ### Basic usage
 
@@ -48,8 +48,8 @@ List the installed workflows and choose the one matching the task:
 composer skills:show
 ```
 
-For example, request `$yii2-forms-validation` in Codex for an ActiveForm task, or use `yii2-upgrade-22` to assess
-an existing Yii 2.0 application's migration. See the [skill catalog](skills/README.md) and
+For example, request `$yii2-forms-validation` in Codex for an ActiveForm task, or use `yii2-upgrade-22` to assess an
+existing Yii 2.0 application's migration. See the [skill catalog](skills/README.md) and
 [client examples](docs/examples.md).
 
 ## Documentation
@@ -60,13 +60,21 @@ an existing Yii 2.0 application's migration. See the [skill catalog](skills/READ
 - 🧪 [Testing Guide](docs/testing.md): repository quality and workflow security checks.
 - 🤖 [Skill Catalog](skills/README.md): all twenty framework skill bundles.
 
+The guide to installing and using the framework skills is published at
+<https://yii2-framework.github.io/docs/project/ai-agents/>.
+
 ## AI assistance
 
-Read the chosen skill's complete `SKILL.md` and its referenced resources. Match the installed framework revision
-before applying Yii 22 guidance; each bundle includes its scope, relevant documentation, and observable checks.
+AI agents: read the [documentation index](https://yii2-framework.github.io/docs/llms.txt) and fetch the Markdown version
+of a page by appending `index.md` to its URL. The
+[AI agents guide](https://yii2-framework.github.io/docs/project/ai-agents/) covers skill installation, client setup and
+verification.
 
-For matching hosted documentation, use <https://yii2-framework.github.io/docs/llms.txt> to select focused pages.
-When hosted material does not match the installed code, use the available source and PHPDoc.
+- 🧭 [Yii framework skills](https://yii2-framework.github.io/docs/project/ai-agents/#yii-framework-skills): the twenty
+  Yii 22.0 workflows owned by this repository, including `yii2-framework`.
+
+The hosted documentation covers Yii 22.0. If it does not match the installed revision or is unavailable, use the
+[repository guides](#documentation), the [skill sources](skills/) and the [changelog](CHANGELOG.md).
 
 ## Package information
 

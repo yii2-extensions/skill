@@ -17,23 +17,23 @@ Inspect donor availability and synchronization status from the application root:
 composer skills:show
 ```
 
-This lists installed or declared sources and target status. It is separate from the coding agent's native discovery
-and activation, and is not an internet catalog.
+This lists installed or declared sources and target status. It is separate from the coding agent's native discovery and
+activation, and is not an internet catalog.
 
 ## Invoke a skill
 
-Start a fresh client session in the application root and confirm the relevant skill is listed.
-For example, with the form workflow installed:
+Start a fresh client session in the application root and confirm the relevant skill is listed. For example, with the
+form workflow installed:
 
 - Codex: invoke `$yii2-forms-validation` or select it in the skill picker.
 - Claude Code: invoke `/yii2-forms-validation`.
 - OpenCode: request its native skill tool with the workflow name.
 - Copilot in VS Code: select the workflow in the client skill interface.
 
-Ask for a small task, inspect the loaded instructions and changed files, and run the application's existing checks.
-File installation, client discovery, instruction loading, and a correct task result are distinct observations.
+Ask for a small task, inspect the loaded instructions and changed files, and run the application's existing checks. File
+installation, client discovery, instruction loading, and a correct task result are distinct observations.
 
-For an upgrade, establish installed and locked versions, runtime requirements, and affected application behavior
-before following the migration checkpoints. The skill does not authorize live migrations or deployments.
+For an upgrade, establish installed and locked versions, runtime requirements, and affected application behavior before
+following the migration checkpoints. The skill does not authorize live migrations or deployments.
 
 [Back to documentation](../README.md#documentation)

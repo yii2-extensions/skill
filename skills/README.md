@@ -1,7 +1,7 @@
 # Skill catalog
 
-Each directory is a complete portable bundle. Read its `SKILL.md` and referenced resources together.
-Use the [installation guide](../docs/installation.md) to make the workflows available in an application.
+Each directory is a complete portable bundle. Read its `SKILL.md` and referenced resources together. Use the
+[installation guide](../docs/installation.md) to make the workflows available in an application.
 
 | Skill                                                         | Workflow                                    |
 | ------------------------------------------------------------- | ------------------------------------------- |
